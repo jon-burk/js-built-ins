@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Math Object Members Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #c5c5c5;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #f9d423;
+        }
+        .member {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #444;
+            padding: 5px;
+            border-radius: 3px;
+            display: inline-block;
+            color: #f9d423;
+        }
+        .result {
+            color: #f9d423;
+            font-family: "Courier New", Courier, monospace;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Math Object Members Demo</h1>
+
+    <h2>Properties</h2>
+    <div class="member">
+        <span class="code">Math.E</span> - Euler's number: 
+        <span class="result" id="euler"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.LN2</span> - Natural logarithm of 2: 
+        <span class="result" id="ln2"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.LN10</span> - Natural logarithm of 10: 
+        <span class="result" id="ln10"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.LOG2E</span> - Base-2 logarithm of E: 
+        <span class="result" id="log2e"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.LOG10E</span> - Base-10 logarithm of E: 
+        <span class="result" id="log10e"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.PI</span> - Pi: 
+        <span class="result" id="pi"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.SQRT1_2</span> - Square root of 1/2: 
+        <span class="result" id="sqrt12"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.SQRT2</span> - Square root of 2: 
+        <span class="result" id="sqrt2"></span>
+    </div>
+
+    <h2>Methods</h2>
+    <div class="member">
+        <span class="code">Math.abs(-7.25)</span> - Absolute value of -7.25: 
+        <span class="result" id="abs"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.acos(0.5)</span> - Arccosine of 0.5: 
+        <span class="result" id="acos"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.acosh(2)</span> - Hyperbolic arccosine of 2: 
+        <span class="result" id="acosh"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.asin(0.5)</span> - Arcsine of 0.5: 
+        <span class="result" id="asin"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.asinh(1)</span> - Hyperbolic arcsine of 1: 
+        <span class="result" id="asinh"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.atan(1)</span> - Arctangent of 1: 
+        <span class="result" id="atan"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.atanh(0.5)</span> - Hyperbolic arctangent of 0.5: 
+        <span class="result" id="atanh"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.atan2(1, 1)</span> - Arctangent of quotient of 1 and 1: 
+        <span class="result" id="atan2"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.cbrt(27)</span> - Cube root of 27: 
+        <span class="result" id="cbrt"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.ceil(4.7)</span> - Ceiling of 4.7: 
+        <span class="result" id="ceil"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.clz32(1)</span> - Leading zero bits in 32-bit binary of 1: 
+        <span class="result" id="clz32"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.cos(Math.PI)</span> - Cosine of Pi: 
+        <span class="result" id="cos"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.cosh(0)</span> - Hyperbolic cosine of 0: 
+        <span class="result" id="cosh"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.exp(1)</span> - Exponential of 1: 
+        <span class="result" id="exp"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.expm1(1)</span> - Exponential of 1 minus 1: 
+        <span class="result" id="expm1"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.floor(4.7)</span> - Floor of 4.7: 
+        <span class="result" id="floor"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.fround(1.337)</span> - Nearest 32-bit float representation of 1.337: 
+        <span class="result" id="fround"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.hypot(3, 4)</span> - Square root of sum of squares of 3 and 4: 
+        <span class="result" id="hypot"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.imul(2, 4)</span> - 32-bit integer multiplication of 2 and 4: 
+        <span class="result" id="imul"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.log(Math.E)</span> - Natural logarithm of Euler's number: 
+        <span class="result" id="log"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.log1p(1)</span> - Natural logarithm of 1 plus 1: 
+        <span class="result" id="log1p"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.log2(8)</span> - Base-2 logarithm of 8: 
+        <span class="result" id="log2"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.log10(100)</span> - Base-10 logarithm of 100: 
+        <span class="result" id="log10"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.max(1, 3, 7)</span> - Maximum of 1, 3, 7: 
+        <span class="result" id="max"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.min(1, 3, 7)</span> - Minimum of 1, 3, 7: 
+        <span class="result" id="min"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.pow(2, 3)</span> - 2 raised to the power of 3: 
+        <span class="result" id="pow"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.random()</span> - Random number between 0 and 1: 
+        <span class="result" id="random"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.round(4.5)</span> - Rounded value of 4.5: 
+        <span class="result" id="round"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.sign(-5)</span> - Sign of -5: 
+        <span class="result" id="sign"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.sin(Math.PI / 2)</span> - Sine of Pi/2: 
+        <span class="result" id="sin"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.sinh(1)</span> - Hyperbolic sine of 1: 
+        <span class="result" id="sinh"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.sqrt(16)</span> - Square root of 16: 
+        <span class="result" id="sqrt"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.tan(Math.PI / 4)</span> - Tangent of Pi/4: 
+        <span class="result" id="tan"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.tanh(1)</span> - Hyperbolic tangent of 1: 
+        <span class="result" id="tanh"></span>
+    </div>
+    <div class="member">
+        <span class="code">Math.trunc(4.9)</span> - Integer part of 4.9: 
+        <span class="result" id="trunc"></span>
+    </div>
+
+    <script>
+        // Properties
+        document.getElementById('euler').textContent = Math.E;
+        document.getElementById('ln2').textContent = Math.LN2;
+        document.getElementById('ln10').textContent = Math.LN10;
+        document.getElementById('log2e').textContent = Math.LOG2E;
+        document.getElementById('log10e').textContent = Math.LOG10E;
+        document.getElementById('pi').textContent = Math.PI;
+        document.getElementById('sqrt12').textContent = Math.SQRT1_2;
+        document.getElementById('sqrt2').textContent = Math.SQRT2;
+
+        // Methods
+        document.getElementById('abs').textContent = Math.abs(-7.25);
+        document.getElementById('acos').textContent = Math.acos(0.5);
+        document.getElementById('acosh').textContent = Math.acosh(2);
+        document.getElementById('asin').textContent = Math.asin(0.5);
+        document.getElementById('asinh').textContent = Math.asinh(1);
+        document.getElementById('atan').textContent = Math.atan(1);
+        document.getElementById('atanh').textContent = Math.atanh(0.5);
+        document.getElementById('atan2').textContent = Math.atan2(1, 1);
+        document.getElementById('cbrt').textContent = Math.cbrt(27);
+        document.getElementById('ceil').textContent = Math.ceil(4.7);
+        document.getElementById('clz32').textContent = Math.clz32(1);
+        document.getElementById('cos').textContent = Math.cos(Math.PI);
+        document.getElementById('cosh').textContent = Math.cosh(0);
+        document.getElementById('exp').textContent = Math.exp(1);
+        document.getElementById('expm1').textContent = Math.expm1(1);
+        document.getElementById('floor').textContent = Math.floor(4.7);
+        document.getElementById('fround').textContent = Math.fround(1.337);
+        document.getElementById('hypot').textContent = Math.hypot(3, 4);
+        document.getElementById('imul').textContent = Math.imul(2, 4);
+        document.getElementById('log').textContent = Math.log(Math.E);
+        document.getElementById('log1p').textContent = Math.log1p(1);
+        document.getElementById('log2').textContent = Math.log2(8);
+        document.getElementById('log10').textContent = Math.log10(100);
+        document.getElementById('max').textContent = Math.max(1, 3, 7);
+        document.getElementById('min').textContent = Math.min(1, 3, 7);
+        document.getElementById('pow').textContent = Math.pow(2, 3);
+        document.getElementById('random').textContent = Math.random();
+        document.getElementById('round').textContent = Math.round(4.5);
+        document.getElementById('sign').textContent = Math.sign(-5);
+        document.getElementById('sin').textContent = Math.sin(Math.PI / 2);
+        document.getElementById('sinh').textContent = Math.sinh(1);
+        document.getElementById('sqrt').textContent = Math.sqrt(16);
+        document.getElementById('tan').textContent = Math.tan(Math.PI / 4);
+        document.getElementById('tanh').textContent = Math.tanh(1);
+        document.getElementById('trunc').textContent = Math.trunc(4.9);
+    </script>
+</body>
+</html>
